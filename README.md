@@ -47,11 +47,9 @@ yarn test
 
 # Acknowledgements
 
-- [evm.codes](https://evm.codes)
 - [foundry](https://github.com/gakonst/foundry)
 - [solmate](https://github.com/Rari-Capital/solmate)
 - [Georgios Konstantopoulos](https://github.com/gakonst) for [forge-template](https://github.com/gakonst/forge-template) resource.
-
 
 ## Disclaimer
 
