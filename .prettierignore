@@ -1,0 +1,7 @@
+build
+coverage
+out
+lib
+assets
+node_modules
+.next

@@ -1,0 +1,24 @@
+{
+  "name": "foundry-starter",
+  "description": "Minimal Template for Foundry Projects",
+  "author": "Andreas Bigger <andreas@nascent.xyz>",
+  "license": "AGPL-3.0-only",
+  "version": "1.2.0",
+  "files": [
+    "src/**/*.sol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abigger87/foundry-starter.git"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.13"
+  },
+  "scripts": {
+    "setup": "forge init",
+    "sync": "forge update",
+    "test": "forge test",
+    "lint": "prettier --write src/**/*.sol"
+  }
+}
