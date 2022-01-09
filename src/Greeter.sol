@@ -10,8 +10,8 @@ contract Greeter {
     _gm = newGm;
   }
 
-  function gm(string memory myGm) public {
-    require(myGm == _gm, "WRONG_GM");
+  function gm(string memory myGm) public view returns(string memory greeting) {
+    require(keccak256(abi.encodePacked((myGm))) == keccak256(abi.encodePacked((greeting = _gm))), "WRONG_GM");
   }
 
   function setGm(string memory newGm) public {
