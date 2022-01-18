@@ -6,8 +6,9 @@
 
 ```ml
 lib
-├─ ds-test
-├─ solmate
+├─ ds-test — https://github.com/dapphub/ds-test
+├─ forge-std — https://github.com/brockelmore/forge-std
+├─ solmate — https://github.com/Rari-Capital/solmate
 src
 ├─ tests
 │  └─ Greeter.t — "Greeter Tests"
