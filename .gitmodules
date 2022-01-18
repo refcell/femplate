@@ -2,3 +2,6 @@
 	path = lib/ds-test
 	url = https://github.com/dapphub/ds-test
 	
+[submodule "lib/forge-std"]
+	path = lib/forge-std
+	url = https://github.com/brockelmore/forge-std
