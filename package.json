@@ -16,9 +16,10 @@
     "prettier-plugin-solidity": "^1.0.0-beta.13"
   },
   "scripts": {
-    "setup": "forge init",
-    "sync": "forge update",
-    "test": "forge test",
-    "lint": "prettier --write src/**/*.sol"
+    "setup": "make clean && make build",
+    "sync": "make update",
+    "test": "make test",
+    "snapshot": "make snapshot",
+    "lint": "make lint"
   }
 }

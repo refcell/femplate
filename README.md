@@ -16,6 +16,10 @@ src
 
 ## Development
 
+### Install DappTools
+
+Install DappTools using their [installation guide](https://github.com/dapphub/dapptools#installation).
+
 ### First time with Forge/Foundry?
 
 Don't have [rust](https://www.rust-lang.org/tools/install) installed?
@@ -29,15 +33,17 @@ Then, install [foundry](https://github.com/gakonst/foundry) with:
 cargo install --git https://github.com/gakonst/foundry --bin forge --locked
 ```
 
-### Dependencies
+### Setup and Build
 
 ```bash
-yarn setup
+make
 ```
 
 ### Run Tests
 
 ```bash
+make test
+# OR #
 yarn test
 ```
 
