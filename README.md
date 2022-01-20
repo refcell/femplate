@@ -24,16 +24,29 @@ Install DappTools using their [installation guide](https://github.com/dapphub/da
 
 #### First time with Forge/Foundry?
 
+See the official Foundry installation [instructions](https://github.com/gakonst/foundry/blob/master/README.md#installation).
+
 Don't have [rust](https://www.rust-lang.org/tools/install) installed?
 Run
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Then, install [foundry](https://github.com/gakonst/foundry) with:
+Then, install the [foundry](https://github.com/gakonst/foundry) toolchain installer (`foundryup`) with:
 ```bash
-cargo install --git https://github.com/gakonst/foundry --bin forge --locked
+curl -L https://foundry.paradigm.xyz | bash
 ```
+
+Now that you've installed the `foundryup` binary,
+anytime you need to get the latest `forge` or `cast` binaries,
+you can run `foundryup`.
+
+So, simply execute:
+```bash
+foundryup
+```
+
+🎉 Foundry is installed! 🎉
 
 #### Setup
 
