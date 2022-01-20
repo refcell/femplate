@@ -17,11 +17,12 @@ src
 
 ## Development
 
-### Install DappTools
+[foundry-starter](https://github.com/abigger87/foundry-starter) is intended to be minimal while also providing backwards compatibility. Thus, both [DappTools](https://dapp.tools/) and [Foundry](https://github.com/gaskonst/foundry) are supported. Installation instructions for both are included below.
+#### Install DappTools
 
 Install DappTools using their [installation guide](https://github.com/dapphub/dapptools#installation).
 
-### First time with Forge/Foundry?
+#### First time with Forge/Foundry?
 
 Don't have [rust](https://www.rust-lang.org/tools/install) installed?
 Run
@@ -34,19 +35,29 @@ Then, install [foundry](https://github.com/gakonst/foundry) with:
 cargo install --git https://github.com/gakonst/foundry --bin forge --locked
 ```
 
-### Setup and Build
+#### Setup
 
 ```bash
 make
+# OR #
+make setup
 ```
 
-### Run Tests
+#### Build
+
+```bash
+make build
+```
+
+#### Run Tests
 
 ```bash
 make test
-# OR #
-yarn test
 ```
+
+#### Configure Foundry
+
+Using [foundry.toml](./foundry.toml), Foundry is easily configurable.
 
 ## License
 
