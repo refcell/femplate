@@ -31,12 +31,12 @@ block_timestamp = 0
 block_difficulty = 0
 
 
-## Environment Variables
+## !! Environment Variables !! ##
 
-Foundry's tools read all environment variable names prefixed with `FOUNDRY_` using the string after the `_` as the name
-of a configuration value as the value of the parameter as the value itself. But the
-corresponding [dapptools](https://github.com/dapphub/dapptools/tree/master/src/dapp#configuration) config vars are also
-supported, this means that `FOUNDRY_SRC` and `DAPP_SRC` are equivalent.
+# Foundry's tools read all environment variable names prefixed with `FOUNDRY_` using the string after the `_` as the name
+# of a configuration value as the value of the parameter as the value itself. But the
+# corresponding [dapptools](https://github.com/dapphub/dapptools/tree/master/src/dapp#configuration) config vars are also
+# supported, this means that `FOUNDRY_SRC` and `DAPP_SRC` are equivalent.
 
-Environment variables take precedence over values in `foundry.toml`. Values are parsed as loose form of TOML syntax.
-Consider the following examples:
+# Environment variables take precedence over values in `foundry.toml`. Values are parsed as loose form of TOML syntax.
+# Consider the following examples:
