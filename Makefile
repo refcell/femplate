@@ -14,7 +14,7 @@ clean  :; forge clean
 remove :; rm -rf .gitmodules && rm -rf .git/modules/* && rm -rf lib && touch .gitmodules && git add . && git commit -m "modules"
 
 # Install the Modules
-install :; forge install dapphub/ds-test && forge install rari-capital/solmate && forge install brockelmore/forge-std
+install :; forge install dapphub/ds-test && forge install rari-capital/solmate && forge install brockelmore/forge-std && forge install ZeframLou/clones-with-immutable-args
 
 # Update Dependencies
 update:; forge update
