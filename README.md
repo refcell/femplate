@@ -9,6 +9,7 @@ lib
 ├─ ds-test — https://github.com/dapphub/ds-test
 ├─ forge-std — https://github.com/brockelmore/forge-std
 ├─ solmate — https://github.com/Rari-Capital/solmate
+├─ clones-with-immutable-args — https://github.com/wighawag/clones-with-immutable-args
 src
 ├─ tests
 │  └─ Greeter.t — "Greeter Tests"
@@ -81,6 +82,7 @@ Using [foundry.toml](./foundry.toml), Foundry is easily configurable.
 - [foundry](https://github.com/gakonst/foundry)
 - [solmate](https://github.com/Rari-Capital/solmate)
 - [forge-std](https://github.com/brockelmore/forge-std)
+- [clones-with-immutable-args](https://github.com/wighawag/clones-with-immutable-args).
 - [foundry-toolchain](https://github.com/onbjerg/foundry-toolchain) by [onbjerg](https://github.com/onbjerg).
 - [forge-template](https://github.com/FrankieIsLost/forge-template) by [FrankieIsLost](https://github.com/FrankieIsLost).
 - [Georgios Konstantopoulos](https://github.com/gakonst) for [forge-template](https://github.com/gakonst/forge-template) resource.
