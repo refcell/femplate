@@ -1,6 +1,13 @@
-# foundry-starter  • [![tests](https://github.com/abigger87/foundry-starter/actions/workflows/tests.yml/badge.svg)](https://github.com/abigger87/foundry-starter/actions/workflows/tests.yml) [![lints](https://github.com/abigger87/foundry-starter/actions/workflows/lints.yml/badge.svg)](https://github.com/abigger87/foundry-starter/actions/workflows/lints.yml) ![GitHub](https://img.shields.io/github/license/abigger87/foundry-starter) ![GitHub package.json version](https://img.shields.io/github/package-json/v/abigger87/foundry-starter)
+<img align="right" width="150" height="150" top="100" src="./assets/readme.jpg">
 
-Backwards Compatible Template for Foundry and DappTools Projects 
+# foundry-starter • [![tests](https://github.com/abigger87/foundry-starter/actions/workflows/tests.yml/badge.svg)](https://github.com/abigger87/foundry-starter/actions/workflows/tests.yml) [![lints](https://github.com/abigger87/foundry-starter/actions/workflows/lints.yml/badge.svg)](https://github.com/abigger87/foundry-starter/actions/workflows/lints.yml) ![GitHub](https://img.shields.io/github/license/abigger87/foundry-starter)  ![GitHub package.json version](https://img.shields.io/github/package-json/v/abigger87/foundry-starter)
+
+
+Backwards Compatible Template for Foundry and DappTools Projects
+
+## Overview
+
+[foundry-starter](https://github.com/abigger87/foundry-starter) is intended to be minimal while also providing backwards compatibility. Thus, both [DappTools](https://dapp.tools/) and [Foundry](https://github.com/gaskonst/foundry) are supported. Installation instructions for both are included below.
 
 ## Blueprint
 
@@ -18,10 +25,7 @@ src
 
 ## Development
 
-[foundry-starter](https://github.com/abigger87/foundry-starter) is intended to be minimal while also providing backwards compatibility. Thus, both [DappTools](https://dapp.tools/) and [Foundry](https://github.com/gaskonst/foundry) are supported. Installation instructions for both are included below.
-#### Install DappTools
 
-Install DappTools using their [installation guide](https://github.com/dapphub/dapptools#installation).
 
 #### First time with Forge/Foundry?
 
@@ -49,6 +53,25 @@ foundryup
 
 🎉 Foundry is installed! 🎉
 
+#### Writing Tests with Foundry
+
+With [Foundry](https://gakonst.xyz), tests are written in Solidity! 🥳
+
+Create a test file for your contract in the `src/tests/` directory.
+
+For example, [`src/Greeter.sol`](./src/Greeter.sol) has its test file defined in [`./src/tests/Greeter.t.sol`](./src/tests/Greeter.t.sol).
+
+To learn more about writing tests in Solidity for Foundry and Dapptools, reference Rari Capital's [solmate](https://github.com/Rari-Capital/solmate/tree/main/src/test) repository largely created by [@transmissions11](https://twitter.com/transmissions11). 
+
+#### Configure Foundry
+
+Using [foundry.toml](./foundry.toml), Foundry is easily configurable.
+
+
+#### Install DappTools
+
+Install DappTools using their [installation guide](https://github.com/dapphub/dapptools#installation).
+
 #### Setup
 
 ```bash
@@ -68,10 +91,6 @@ make build
 ```bash
 make test
 ```
-
-#### Configure Foundry
-
-Using [foundry.toml](./foundry.toml), Foundry is easily configurable.
 
 ## License
 
