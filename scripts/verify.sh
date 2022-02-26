@@ -1,3 +1,30 @@
 #!/usr/bin/env bash
 
-forge verify-contract ./src/Greeter.sol:Greeter <your_deployed_address> "gm"
+# TODO: Remove this prompt and parse dynamically
+echo Which compiler version did you use to build?
+
+read version
+
+echo $version
+
+echo Which contract do you want to verify?
+
+read contract
+
+echo $contract
+
+echo What is the deployed address?
+
+read deployed
+
+echo $deployed
+
+echo Enter constructor arguments separated by spaces \(eg 1 2 3\):
+
+read -ra args
+
+echo $args
+
+echo running command: "forge verify-contract --compiler-version \"$version\" ./src/${contract}.sol:${contract} $deployed ${args}"
+
+forge verify-contract --compiler-version \"$version\" ./src/${contract}.sol:${contract} $deployed $args

@@ -3,11 +3,17 @@
 # femplate • [![tests](https://github.com/abigger87/femplate/actions/workflows/tests.yml/badge.svg)](https://github.com/abigger87/femplate/actions/workflows/tests.yml) [![lints](https://github.com/abigger87/femplate/actions/workflows/lints.yml/badge.svg)](https://github.com/abigger87/femplate/actions/workflows/lints.yml) ![GitHub](https://img.shields.io/github/license/abigger87/femplate)  ![GitHub package.json version](https://img.shields.io/github/package-json/v/abigger87/femplate)
 
 
-Backwards Compatible Template for Foundry and DappTools Projects
+Backwards Compatible Template for Foundry and DappTools Projects.
 
 ## Overview
 
 [femplate](https://github.com/abigger87/femplate) is intended to be minimal while also providing backwards compatibility. Thus, both [DappTools](https://dapp.tools/) and [Foundry](https://github.com/gaskonst/foundry) are supported. Installation instructions for both are included below.
+
+## Getting Started
+
+Click `use this template` on [Github](https://github.com/abigger87/femplate) to create a new repository with this repo as the initial state.
+
+Run `make rename` to rename all instances of `femplate` with the name of your project/repository.
 
 ## Blueprint
 
@@ -26,8 +32,32 @@ src
 ## Development
 
 
+**Setup**
+```bash
+make
+# OR #
+make setup
+```
 
-#### First time with Forge/Foundry?
+**Building**
+```bash
+make build
+```
+
+**Testing**
+```bash
+make test
+```
+
+**Deployment & Verification**
+
+Inside the [`scripts/`](./scripts/) directory are a few preconfigured scripts that can be used to deploy and verify contracts.
+
+NOTE: These scripts are required to be _executable_ meaning they must be made executable by running `chmod +x ./scripts/*`.
+
+NOTE: these scripts will prompt you for the contract name and deployed addresses (when verifying). Also, they use the `-i` flag on `forge` to ask for your private key for deployment. This uses silent mode which keeps your private key from being printed to the console (and visible in logs).
+
+### First time with Forge/Foundry?
 
 See the official Foundry installation [instructions](https://github.com/gakonst/foundry/blob/master/README.md#installation).
 
@@ -53,7 +83,7 @@ foundryup
 
 🎉 Foundry is installed! 🎉
 
-#### Writing Tests with Foundry
+### Writing Tests with Foundry
 
 With [Foundry](https://gakonst.xyz), tests are written in Solidity! 🥳
 
@@ -61,43 +91,25 @@ Create a test file for your contract in the `src/tests/` directory.
 
 For example, [`src/Greeter.sol`](./src/Greeter.sol) has its test file defined in [`./src/tests/Greeter.t.sol`](./src/tests/Greeter.t.sol).
 
-To learn more about writing tests in Solidity for Foundry and Dapptools, reference Rari Capital's [solmate](https://github.com/Rari-Capital/solmate/tree/main/src/test) repository largely created by [@transmissions11](https://twitter.com/transmissions11). 
+To learn more about writing tests in Solidity for Foundry and Dapptools, reference Rari Capital's [solmate](https://github.com/Rari-Capital/solmate/tree/main/src/test) repository largely created by [@transmissions11](https://twitter.com/transmissions11).
 
-#### Configure Foundry
+### Configure Foundry
 
 Using [foundry.toml](./foundry.toml), Foundry is easily configurable.
 
 
-#### Install DappTools
+### Install DappTools
 
 Install DappTools using their [installation guide](https://github.com/dapphub/dapptools#installation).
 
-#### Setup
-
-```bash
-make
-# OR #
-make setup
-```
-
-#### Build
-
-```bash
-make build
-```
-
-#### Run Tests
-
-```bash
-make test
-```
 
 ## License
 
 [AGPL-3.0-only](https://github.com/abigger87/femplate/blob/master/LICENSE)
 
-# Acknowledgements
+## Acknowledgements
 
+- [femplate](https://github.com/abigger87/femplate)
 - [foundry](https://github.com/gakonst/foundry)
 - [solmate](https://github.com/Rari-Capital/solmate)
 - [forge-std](https://github.com/brockelmore/forge-std)
