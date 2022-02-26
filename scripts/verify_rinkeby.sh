@@ -1,15 +1,32 @@
 #!/usr/bin/env bash
 
-## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ##
-## !!   Create a .env file with:                                                 !! ##
-## !!   ETH_RINKEBY_RPC_URL=xxx                                                  !! ##
-## !!   PROFIT_ADDR=xxx                                                          !! ##
-## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ##
+# TODO: Remove this prompt and parse dynamically
+echo Which compiler version did you use to build?
 
-## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ##
-## !!   Alternatively, prepend to the deploy script command like so:             !! ##
-## !!   ETH_RINKEBY_RPC_URL=x PROFIT_ADDR=0xdeafbeaf... sh ./scripts/deploy.sh   !! ##
-## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ##
-# --rpc-url $ETH_RINKEBY_RPC_URL
+read version
 
-forge verify-contract ./src/Greeter.sol:Greeter <your_deployed_address> "gm"
+echo $version
+
+echo Which contract do you want to verify?
+
+read contract
+
+echo $contract
+
+echo What is the deployed address?
+
+read deployed
+
+echo $deployed
+
+echo Enter constructor arguments separated by spaces \(eg 1 2 3\):
+
+read -ra args
+
+echo $args
+
+echo Enter your Etherscan API Key:
+
+read -s etherscan
+
+forge verify-contract --compiler-version \"$version\" $deployed ./src/${contract}.sol:${contract} $etherscan --constructor-args ${args}

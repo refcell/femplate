@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
-## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ##
-## !!   Create a .env file with:                                                 !! ##
-## !!   ETH_RINKEBY_RPC_URL=xxx                                                  !! ##
-## !!   PROFIT_ADDR=xxx                                                          !! ##
-## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ##
+# Read the Rinkeby RPC URL
+echo Enter Your Rinkeby RPC URL:
+echo Example: "https://eth-rinkeby.alchemyapi.io/v2/XXXXXXXXXX"
+read -s rpc
 
-## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ##
-## !!   Alternatively, prepend to the deploy script command like so:             !! ##
-## !!   ETH_RINKEBY_RPC_URL=x PROFIT_ADDR=0xdeafbeaf... sh ./scripts/deploy.sh   !! ##
-## !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ##
+# Read the contract name
+echo Which contract do you want to deploy \(eg Greeter\)?
+read contract
 
-forge create ./src/Greeter.sol:Greeter -i --rpc-url $ETH_RINKEBY_RPC_URL --constructor-args "gm"
+# Read the constructor arguments
+echo Enter constructor arguments separated by spaces \(eg 1 2 3\):
+read -ra args
+
+forge create ./src/${contract}.sol:${contract} -i --rpc-url $rpc --constructor-args ${args}

@@ -25,6 +25,8 @@ read -ra args
 
 echo $args
 
-echo running command: "forge verify-contract --compiler-version \"$version\" ./src/${contract}.sol:${contract} $deployed ${args}"
+echo Enter your Etherscan API Key:
 
-forge verify-contract --compiler-version \"$version\" ./src/${contract}.sol:${contract} $deployed $args
+read -s etherscan
+
+forge verify-contract --compiler-version \"$version\" $deployed ./src/${contract}.sol:${contract} $etherscan --constructor-args ${args}
