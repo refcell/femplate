@@ -101,6 +101,7 @@ To learn more about writing tests in Solidity for Foundry and Dapptools, referen
 
 Using [foundry.toml](./foundry.toml), Foundry is easily configurable.
 
+For a full list of configuration options, see the Foundry [configuration documentation](https://github.com/gakonst/foundry/blob/master/config/README.md#all-options).
 
 ### Install DappTools
 

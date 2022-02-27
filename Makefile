@@ -37,3 +37,6 @@ snapshot :; forge clean && forge snapshot --optimize --optimize-runs 1000000
 
 # Fork Mainnet With Hardhat
 mainnet-fork :; npx hardhat node --fork ${ETH_MAINNET_RPC_URL}
+
+# Rename all instances of femplate with the new repo name
+rename :; chmod +x ./scripts/* && ./scripts/rename.sh
