@@ -18,4 +18,4 @@ jobs:
       - name: Update Modules
         run: yarn sync
       - name: Run Tests
-        run: yarn test
+        run: FOUNDRY_PROFILE=ci yarn test

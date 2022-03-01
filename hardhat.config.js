@@ -2,5 +2,5 @@
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.8.11",
+  solidity: "0.8.12",
 };
