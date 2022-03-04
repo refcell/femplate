@@ -65,12 +65,6 @@ NOTE: these scripts will prompt you for the contract name and deployed addresses
 
 See the official Foundry installation [instructions](https://github.com/gakonst/foundry/blob/master/README.md#installation).
 
-Don't have [rust](https://www.rust-lang.org/tools/install) installed?
-Run
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
 Then, install the [foundry](https://github.com/gakonst/foundry) toolchain installer (`foundryup`) with:
 ```bash
 curl -L https://foundry.paradigm.xyz | bash
