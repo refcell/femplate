@@ -21,4 +21,9 @@ read contract
 echo Enter constructor arguments separated by spaces \(eg 1 2 3\):
 read -ra args
 
-forge create ./src/${contract}.sol:${contract} -i --rpc-url "http://localhost:8545" --constructor-args ${args}
+if [ -z "$args" ]
+then
+  forge create ./src/${contract}.sol:${contract} -i --rpc-url "http://localhost:8545"
+else
+  forge create ./src/${contract}.sol:${contract} -i --rpc-url "http://localhost:8545" --constructor-args ${args}
+fi
