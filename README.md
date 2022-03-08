@@ -3,11 +3,7 @@
 # femplate • [![tests](https://github.com/abigger87/femplate/actions/workflows/tests.yml/badge.svg)](https://github.com/abigger87/femplate/actions/workflows/tests.yml) [![lints](https://github.com/abigger87/femplate/actions/workflows/lints.yml/badge.svg)](https://github.com/abigger87/femplate/actions/workflows/lints.yml) ![GitHub](https://img.shields.io/github/license/abigger87/femplate)  ![GitHub package.json version](https://img.shields.io/github/package-json/v/abigger87/femplate)
 
 
-Backwards Compatible Template for Foundry and DappTools Projects.
-
-## Overview
-
-[femplate](https://github.com/abigger87/femplate) is intended to be minimal while also providing backwards compatibility. Thus, both [DappTools](https://dapp.tools/) and [Foundry](https://github.com/gaskonst/foundry) are supported. Installation instructions for both are included below.
+Robust Template for Foundry Projects.
 
 ## Getting Started
 
