@@ -2,7 +2,7 @@
 # (-include to ignore error if it does not exist)
 -include .env
 
-all: clean remove install update solc build dappbuild
+all: clean install update solc build dappbuild
 
 # Install proper solc version.
 solc:; nix-env -f https://github.com/dapphub/dapptools/archive/master.tar.gz -iA solc-static-versions.solc_0_8_11
@@ -14,7 +14,7 @@ clean  :; forge clean
 remove :; rm -rf .gitmodules && rm -rf .git/modules/* && rm -rf lib && touch .gitmodules && git add . && git commit -m "modules"
 
 # Install the Modules
-install :; forge install dapphub/ds-test && forge install rari-capital/solmate && forge install brockelmore/forge-std && forge install ZeframLou/clones-with-immutable-args
+install :; forge install # dapphub/ds-test && forge install rari-capital/solmate && forge install brockelmore/forge-std && forge install ZeframLou/clones-with-immutable-args
 
 # Update Dependencies
 update:; forge update
