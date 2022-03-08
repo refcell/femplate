@@ -13,6 +13,13 @@ Backwards Compatible Template for Foundry and DappTools Projects.
 
 Click `use this template` on [Github](https://github.com/abigger87/femplate) to create a new repository with this repo as the initial state.
 
+Or, if your repo already exists, run:
+```sh
+forge init --template https://github.com/abigger87/femplate
+git submodule update --init --recursive
+forge install
+```
+
 Run `make rename` to rename all instances of `femplate` with the name of your project/repository.
 
 ## Blueprint
