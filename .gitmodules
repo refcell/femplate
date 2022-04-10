@@ -3,7 +3,4 @@
 	url = https://github.com/dapphub/ds-test
 [submodule "lib/solmate"]
 	path = lib/solmate
-	url = https://github.com/rari-capital/solmate
-[submodule "lib/forge-std"]
-	path = lib/forge-std
-	url = https://github.com/brockelmore/forge-std
+	url = https://github.com/Rari-Capital/solmate
