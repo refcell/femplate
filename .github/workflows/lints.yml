@@ -8,6 +8,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - uses: actions/setup-node@v2
 
       - name: Install Foundry
@@ -17,7 +19,6 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
-      - name: Update Modules
-        run: yarn sync
+
       - name: Run lints
         run: yarn lint

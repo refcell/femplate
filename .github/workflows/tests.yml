@@ -8,14 +8,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          submodules: recursive
       - uses: actions/setup-node@v2
+
       - name: Install Foundry
         uses: onbjerg/foundry-toolchain@v1
         with:
           version: nightly
+
       - name: Install Dependencies
         run: yarn
-      - name: Update Modules
-        run: yarn sync
+
       - name: Run Tests
-        run: FOUNDRY_PROFILE=ci yarn test
+        run: forge test
