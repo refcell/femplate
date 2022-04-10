@@ -1,4 +1,4 @@
-# ft • [![tests](https://github.com/rohansanjay/ft/actions/workflows/tests.yml/badge.svg)](https://github.com/rohansanjay/ft/actions/workflows/tests.yml) [![lints](https://github.com/rohansanjay/ft/actions/workflows/lints.yml/badge.svg)](https://github.com/abigger87/ft/actions/workflows/lints.yml) 
+# ft • [![tests](https://github.com/rohansanjay/ft/actions/workflows/tests.yml/badge.svg)](https://github.com/rohansanjay/ft/actions/workflows/tests.yml) [![lints](https://github.com/rohansanjay/ft/actions/workflows/lints.yml/badge.svg)](https://github.com/rohansanjay/ft/actions/workflows/lints.yml) 
 
 
 Foundry template forked from the goated [abigger87 femplate](https://github.com/abigger87/femplate) with some customizations.
