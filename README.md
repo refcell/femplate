@@ -43,7 +43,7 @@ make test
 
 ## License
 
-[AGPL-3.0-only](https://github.com/abigger87/ft/blob/master/LICENSE)
+[AGPL-3.0-only](https://github.com/rohansanjay/ft/blob/master/LICENSE)
 
 
 ## Acknowledgements
