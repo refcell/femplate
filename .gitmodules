@@ -7,6 +7,3 @@
 [submodule "lib/forge-std"]
 	path = lib/forge-std
 	url = https://github.com/brockelmore/forge-std
-[submodule "lib/clones-with-immutable-args"]
-	path = lib/clones-with-immutable-args
-	url = https://github.com/ZeframLou/clones-with-immutable-args
