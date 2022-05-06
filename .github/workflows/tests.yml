@@ -7,17 +7,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: recursive
-      - uses: actions/setup-node@v2
 
       - name: Install Foundry
-        uses: onbjerg/foundry-toolchain@v1
+        uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
 
-      - name: Install Dependencies
+      - name: Install Solidity Deps
+        run: forge install
+
+      - name: Install Yarn Deps
         run: yarn
 
       - name: Run Tests
