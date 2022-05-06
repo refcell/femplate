@@ -7,8 +7,12 @@ Foundry template forked from the goated [abigger87 femplate](https://github.com/
 ```sh
 mkdir project-name
 cd project-name
+```
+```sh
 forge init --template https://github.com/rohansanjay/ft
 forge install
+```
+```sh
 make rename
 yarn
 ```
@@ -18,9 +22,8 @@ yarn
 
 ```ml
 lib
-├─ ds-test — https://github.com/dapphub/ds-test
-├─ forge-std — https://github.com/brockelmore/forge-std
 ├─ solmate — https://github.com/Rari-Capital/solmate
+├─ forge-std — https://github.com/brockelmore/forge-std
 src
 ├─ tests
 │  └─ Greeter.t — "Greeter Tests"
@@ -49,13 +52,13 @@ make test
 ## Acknowledgements
 
 - [femplate](https://github.com/abigger87/femplate)
-- [foundry](https://github.com/gakonst/foundry)
+- [foundry](https://github.com/foundry-rs/foundry)
 - [solmate](https://github.com/Rari-Capital/solmate)
-- [forge-std](https://github.com/brockelmore/forge-std)
+- [forge-std](https://github.com/foundry-rs/forge-std)
 - [clones-with-immutable-args](https://github.com/wighawag/clones-with-immutable-args).
-- [foundry-toolchain](https://github.com/onbjerg/foundry-toolchain) by [onbjerg](https://github.com/onbjerg).
+- [foundry-toolchain](https://github.com/foundry-rs/foundry-toolchain) by [onbjerg](https://github.com/onbjerg).
 - [forge-template](https://github.com/FrankieIsLost/forge-template) by [FrankieIsLost](https://github.com/FrankieIsLost).
-- [Georgios Konstantopoulos](https://github.com/gakonst) for [forge-template](https://github.com/gakonst/forge-template) resource.
+- [Georgios Konstantopoulos](https://github.com/gakonst) for [forge-template](https://github.com/foundry-rs/forge-template) resource.
 
 
 ## Disclaimer
