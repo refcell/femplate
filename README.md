@@ -8,7 +8,7 @@ Foundry template forked from the goated [abigger87 femplate](https://github.com/
 mkdir project-name
 cd project-name
 forge init --template https://github.com/rohansanjay/ft
-git submodule update --init --recursive
+forge install
 make rename
 yarn
 ```

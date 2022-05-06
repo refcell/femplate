@@ -2,10 +2,9 @@
 pragma solidity 0.8.12;
 
 import {Greeter} from "../Greeter.sol";
-import {DSTestPlus} from "./utils/DSTestPlus.sol";
-import "forge-std/console.sol";
+import "forge-std/Test.sol";
 
-contract GreeterTest is DSTestPlus {
+contract GreeterTest is Test {
     Greeter greeter;
 
     function setUp() public {
