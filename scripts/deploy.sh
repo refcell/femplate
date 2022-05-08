@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Read the Rinkeby RPC URL
+# Read the Mainnet RPC URL
 echo Enter Your Mainnet RPC URL:
 echo Example: "https://eth-mainnet.alchemyapi.io/v2/XXXXXXXXXX"
 read -s rpc
