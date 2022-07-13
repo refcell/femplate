@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-pragma solidity 0.8.13;
+pragma solidity ^0.8.15;
 
-import {Greeter} from "../Greeter.sol";
+import "forge-std/Test.sol";
 
-import "@std/Test.sol";
+import {Greeter} from "src/Greeter.sol";
 
 contract GreeterTest is Test {
     using stdStorage for StdStorage;
@@ -23,7 +23,7 @@ contract GreeterTest is Test {
     // Or at https://github.com/foundry-rs/forge-std
     function testSetGm() public {
         greeter.setGm("gm gm");
-        
+
         // Expect the GMEverybodyGM event to be fired
         vm.expectEmit(true, true, true, true);
         emit GMEverybodyGM();

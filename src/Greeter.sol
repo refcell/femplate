@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-pragma solidity 0.8.13;
+pragma solidity ^0.8.15;
 
 /// @title Greeter
-/// @author andreas@nascent.xyz
 contract Greeter {
   string public _gm;
   address public owner;
