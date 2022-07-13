@@ -1,21 +1,20 @@
-name: Tests
+name: ci
 
 on: [push]
 
 jobs:
   tests:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+
       - name: Install Foundry
         uses: onbjerg/foundry-toolchain@v1
         with:
           version: nightly
+
       - name: Install Dependencies
-        run: yarn
-      - name: Update Modules
-        run: yarn sync
+        run: forge install
+
       - name: Run Tests
-        run: FOUNDRY_PROFILE=ci yarn test
+        run: FOUNDRY_PROFILE=ci forge test
