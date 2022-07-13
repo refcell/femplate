@@ -23,10 +23,13 @@ Run `./scripts/rename.sh` to rename all instances of `femplate` with the name of
 lib
 ├─ forge-std — https://github.com/foundry-rs/forge-std
 ├─ solmate — https://github.com/Rari-Capital/solmate
+scripts
+├─ DeployScript.s.sol — Greeting Script [WIP]
+├─ GreetScript.s.sol — Greeting Script [WIP]
 src
-├─ tests
-│  └─ Greeter.t — "Greeter Tests"
-└─ Greeter — "A Minimal Greeter Contract"
+├─ Greeter — A Minimal Greeter Contract
+test
+└─ Greeter.t — Exhaustive Tests
 ```
 
 
