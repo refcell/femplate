@@ -24,8 +24,7 @@ lib
 ├─ forge-std — https://github.com/foundry-rs/forge-std
 ├─ solmate — https://github.com/Rari-Capital/solmate
 scripts
-├─ DeployScript.s.sol — Greeting Script [WIP]
-├─ GreetScript.s.sol — Greeting Script [WIP]
+├─ Deploy.s.sol — Simple Deployment Script
 src
 ├─ Greeter — A Minimal Greeter Contract
 test
