@@ -20,6 +20,51 @@ jobs:
       - name: Run Tests
         run: FOUNDRY_PROFILE=ci forge test
 
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Install deps
+        run: forge install
+
+      - name: Check contract sizes
+        run: forge build --sizes
+
+      - name: Check gas snapshots
+        run: forge snapshot --check
+
+  slither:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Foundry
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+
+      - name: Install deps
+        run: forge install
+
+      - name: Check contract sizes
+        run: forge build --sizes
+
+      - name: Run Slither
+        uses: crytic/slither-action@main
+        id: slither
+        with:
+          target: 'src/'
+          slither-args: '--exclude solc-version'
+
   scripts:
     strategy:
       fail-fast: true

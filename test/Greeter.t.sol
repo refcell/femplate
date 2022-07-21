@@ -9,20 +9,17 @@ contract GreeterTest is Test {
     using stdStorage for StdStorage;
 
     Greeter greeter;
-    ErrorsTest test;
 
     event GMEverybodyGM();
 
     function setUp() public {
-        console.log(unicode"🧪 Testing Greeter...");
         greeter = new Greeter("gm");
-        test = new ErrorsTest();
     }
 
     // VM Cheatcodes can be found in ./lib/forge-std/src/Vm.sol
     // Or at https://github.com/foundry-rs/forge-std
     function testSetGm() public {
-        greeter.setGm("gm gm");
+        greeter.setGreeting("gm gm");
 
         // Expect the GMEverybodyGM event to be fired
         vm.expectEmit(true, true, true, true);
@@ -38,20 +35,5 @@ contract GreeterTest is Test {
         assertEq(slot, 1);
         bytes32 owner = vm.load(address(greeter), bytes32(slot));
         assertEq(address(this), address(uint160(uint256(owner))));
-
-        console.log(unicode"✅ good morning tests passed!");
-    }
-
-    // Standard Errors can be found in ./lib/forge-std/src/Test.sol
-    // Or at https://github.com/foundry-rs/forge-std
-    function testExpectArithmetic() public {
-        vm.expectRevert(stdError.arithmeticError);
-        test.arithmeticError(10);
-    }
-}
-
-contract ErrorsTest {
-    function arithmeticError(uint256 a) external pure {
-        a - 100;
     }
 }
