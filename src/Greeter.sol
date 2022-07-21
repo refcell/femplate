@@ -3,24 +3,24 @@ pragma solidity ^0.8.15;
 
 /// @title Greeter
 contract Greeter {
-  string public _gm;
+  string public greeting;
   address public owner;
 
   // CUSTOMS
   error BadGm();
   event GMEverybodyGM();
 
-  constructor(string memory newGm) {
-    _gm = newGm;
+  constructor(string memory newGreeting) {
+    greeting = newGreeting;
     owner = msg.sender;
   }
 
-  function gm(string memory myGm) external returns(string memory greeting) {
-    if (keccak256(abi.encodePacked((myGm))) != keccak256(abi.encodePacked((greeting = _gm)))) revert BadGm();
+  function gm(string memory myGm) external returns(string memory greet) {
+    if (keccak256(abi.encodePacked((myGm))) != keccak256(abi.encodePacked((greet = greeting)))) revert BadGm();
     emit GMEverybodyGM();
   }
 
-  function setGm(string memory newGm) external {
-    _gm = newGm;
+  function setGreeting(string memory newGreeting) external {
+    greeting = newGreeting;
   }
 }
