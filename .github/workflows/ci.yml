@@ -63,7 +63,7 @@ jobs:
         id: slither
         with:
           target: 'src/'
-          slither-args: '--exclude incorrect-versions-of-solidity'
+          slither-args: '--exclude solc-version'
 
   scripts:
     strategy:
