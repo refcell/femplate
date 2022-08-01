@@ -15,7 +15,7 @@ git submodule update --init --recursive
 forge install
 ```
 
-Run `./scripts/rename.sh` to rename all instances of `femplate` with the name of your project/repository.
+Run `./utils/rename.sh` to rename all instances of `femplate` with the name of your project/repository.
 
 ## Blueprint
 
@@ -51,11 +51,11 @@ forge test
 
 **Deployment & Verification**
 
-Inside the [`scripts/`](./scripts/) directory are a few preconfigured scripts that can be used to deploy and verify contracts.
+Inside the [`utils/`](./utils/) directory are a few preconfigured scripts that can be used to deploy and verify contracts.
 
 Scripts take inputs from the cli, using silent mode to hide any sensitive information.
 
-_NOTE: These scripts are required to be _executable_ meaning they must be made executable by running `chmod +x ./scripts/*`._
+_NOTE: These scripts are required to be _executable_ meaning they must be made executable by running `chmod +x ./utils/*`._
 
 _NOTE: these scripts will prompt you for the contract name and deployed addresses (when verifying). Also, they use the `-i` flag on `forge` to ask for your private key for deployment. This uses silent mode which keeps your private key from being printed to the console (and visible in logs)._
 
