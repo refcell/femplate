@@ -19,7 +19,7 @@ contract GreeterTest is Test {
     // VM Cheatcodes can be found in ./lib/forge-std/src/Vm.sol
     // Or at https://github.com/foundry-rs/forge-std
     function testSetGm() external {
-        // slither-disable-next-line reentrancy-events
+        // slither-disable-next-line reentrancy-events,reentrancy-benign
         greeter.setGreeting("gm gm");
 
         // Expect the GMEverybodyGM event to be fired
