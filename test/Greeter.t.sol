@@ -12,13 +12,13 @@ contract GreeterTest is Test {
 
     event GMEverybodyGM();
 
-    function setUp() public {
+    function setUp() external {
         greeter = new Greeter("gm");
     }
 
     // VM Cheatcodes can be found in ./lib/forge-std/src/Vm.sol
     // Or at https://github.com/foundry-rs/forge-std
-    function testSetGm() public {
+    function testSetGm() external {
         greeter.setGreeting("gm gm");
 
         // Expect the GMEverybodyGM event to be fired
