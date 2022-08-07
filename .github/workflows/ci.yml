@@ -63,7 +63,7 @@ jobs:
         id: slither
         with:
           target: '.'
-          slither-args: '--exclude solc-version'
+          slither-args: '--exclude solc-version --exclude-dependencies'
 
   scripts:
     strategy:
