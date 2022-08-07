@@ -62,8 +62,8 @@ jobs:
         uses: crytic/slither-action@main
         id: slither
         with:
-          target: 'src/'
-          slither-args: '--exclude solc-version'
+          target: '.'
+          slither-args: '--exclude solc-version,pragma,unused-state --exclude-dependencies'
 
   scripts:
     strategy:
