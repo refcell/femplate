@@ -9,10 +9,6 @@ auto_detect_solc = false
 optimizer = true
 optimizer_runs = 1_000
 fuzz_runs = 1_000
-remappings = [
-  "forge-std=lib/forge-std/src/",
-  "solmate=lib/solmate/src/",
-]
 
 # Extreme Fuzzing CI Profile :P
 [profile.ci]
