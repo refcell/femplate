@@ -18,7 +18,9 @@ jobs:
         run: forge install
 
       - name: Run Tests
-        run: FOUNDRY_PROFILE=ci forge test
+        run: forge test
+        env:
+          FOUNDRY_PROFILE=ci
 
   snapshot:
     runs-on: ubuntu-latest
