@@ -12,3 +12,7 @@ out/
 flattened.txt
 
 broadcast
+
+# Ignore local misc files
+.DS_Store
+*.pem
