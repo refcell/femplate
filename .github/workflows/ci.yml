@@ -5,7 +5,7 @@ on: [push]
 jobs:
   tests:
     name: Forge Testing
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: onbjerg/foundry-toolchain@v1
@@ -17,7 +17,7 @@ jobs:
         run: forge test
 
   snapshot:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: foundry-rs/foundry-toolchain@v1
@@ -31,7 +31,7 @@ jobs:
         run: forge snapshot --check
 
   slither:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         node-version: [16.x]
@@ -55,7 +55,7 @@ jobs:
     strategy:
       fail-fast: true
     name: Run Unix Scripts
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
         with:
