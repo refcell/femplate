@@ -7,8 +7,10 @@ jobs:
     name: Forge Testing
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: onbjerg/foundry-toolchain@v1
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
       - name: dependencies
@@ -19,7 +21,9 @@ jobs:
   snapshot:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
@@ -32,11 +36,10 @@ jobs:
 
   slither:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
