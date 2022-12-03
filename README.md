@@ -28,7 +28,7 @@ We created a guide to get you started with: [GETTING_STARTED.md](./GETTING_START
 
 ### Blueprint
 
-```ml
+```txt
 lib
 ├─ forge-std — https://github.com/foundry-rs/forge-std
 ├─ solmate — https://github.com/transmissions11/solmate
