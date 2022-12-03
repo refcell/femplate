@@ -8,37 +8,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install Foundry
-        uses: onbjerg/foundry-toolchain@v1
+      - uses: onbjerg/foundry-toolchain@v1
         with:
           version: nightly
-
-      - name: Install Dependencies
+      - name: dependencies
         run: forge install
-
-      - name: Run Tests
+      - name: tests
         run: forge test
-        env:
-          FOUNDRY_PROFILE: ci
 
   snapshot:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
+      - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
-
-      - name: Install deps
+      - name: dependencies
         run: forge install
-
-      - name: Check contract sizes
+      - name: check contract sizes
         run: forge build --sizes
-
-      - name: Check gas snapshots
+      - name: check gas snapshots
         run: forge snapshot --check
 
   slither:
@@ -47,21 +36,16 @@ jobs:
       matrix:
         node-version: [16.x]
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
+      - uses: actions/checkout@v3
+      - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
-
-      - name: Install deps
+      - name: dependencies
         run: forge install
-
-      - name: Check contract sizes
+      - name: check contract sizes
         run: forge build --sizes
-
-      - name: Run Slither
-        uses: crytic/slither-action@main
+      - name: slither
+        uses: crytic/slither-action@v0.2.0
         id: slither
         with:
           target: '.'
@@ -76,19 +60,12 @@ jobs:
       - uses: actions/checkout@v3
         with:
           submodules: recursive
-
-      - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
+      - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
-
-      - name: Run Forge build
-        run: |
-          forge --version
-          forge build --sizes
-        id: build
+      - name: dependencies
+        run: forge build --sizes
         continue-on-error: true
-
       - name: Run scripts
         run: |
           ls -lsa
